@@ -54,13 +54,39 @@
   </section>
 
   <section>
-    <h2>3. Product & Pricing Architecture</h2>
-    <ul>
-      <li><strong>Fee Structures:</strong> Flat per transaction, tiered volume rates, and bundled packages</li>
-      <li><strong>Pricing Drivers:</strong> Channel type (SWIFT/Fed), volume, FX conversion, returns</li>
-      <li><strong>Bundling Strategy:</strong> Combine with liquidity tools (e.g., MMDA, intraday credit)</li>
-    </ul>
-  </section>
+  <h2>3. Product & Pricing Architecture</h2>
+  <p>The USD Clearing product architecture is structured to deliver transparency, cost-efficiency, and value alignment across client types. Our approach includes three core pricing tiers and modular add-ons tailored to client behavior and usage patterns.</p>
+  <ul>
+    <li><strong>Fee Structures:</strong> 
+      <ul>
+        <li><em>Standard:</em> $8 flat per transaction (SWIFT MT wire format)</li>
+        <li><em>Volume-based Tiering:</em> $8 → $6 per txn once monthly volume exceeds 5,000 txns</li>
+        <li><em>Premium Bundle:</em> $10 flat includes real-time repair notifications + monthly SLA report</li>
+      </ul>
+    </li>
+    <li><strong>Pricing Drivers:</strong> 
+      <ul>
+        <li><em>Channel type:</em> Fedwire vs SWIFT vs internal book transfer</li>
+        <li><em>FX Conversion:</em> Auto-convert feature markup (e.g., 25bps)</li>
+        <li><em>Operational Impact:</em> High return/repair rate triggers surcharge (e.g., $15 per returned txn)</li>
+      </ul>
+    </li>
+    <li><strong>Bundling Strategy:</strong> 
+      <ul>
+        <li>Bundle with MMDA/CD deposit product — offset clearing fees if minimum balances are met</li>
+        <li>Discounted rate if combined with liquidity tools like overnight sweep</li>
+        <li>One-click upgrade path for custody clients to integrate reporting APIs</li>
+      </ul>
+    </li>
+    <li><strong>Margin Simulation Tool:</strong> 
+      <ul>
+        <li>Used by Sales to simulate client-level economics during pricing discussions</li>
+        <li>Inputs: avg txn volume, FX share %, return rate, corridor region</li>
+      </ul>
+    </li>
+  </ul>
+  <p><em>Example:</em> A broker-dealer clearing 3,000 monthly wires through SWIFT with a 20% FX conversion rate would fall into Tier 1 ($8/txn), but qualify for the MMDA fee waiver if they maintain $10M in monthly average deposits. Their blended revenue per client could reach $24K/month.</p>
+</section>
 
   <section>
     <h2>4. Client Segmentation</h2>
