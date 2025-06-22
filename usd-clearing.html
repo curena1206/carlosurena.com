@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>USD Clearing – Commercialization Playbook</title>
   <style>
-    /* --- Base styles --- */
     :root {
       --primary:#003366;
       --accent:#0055a5;
@@ -34,7 +33,7 @@
 
   <section>
     <h2>1. Purpose & Scope</h2>
-    <p>The objective of this playbook is to provide an end‑to‑end framework to <strong>monetize, launch, and scale</strong> USD Clearing services for financial‑institution (FI) clients. It covers product design, pricing, onboarding, compliance, and performance governance—serving as a <em>“user manual”</em> for Product, Sales, Operations, and Risk teams.</p>
+    <p>The objective of this playbook is to provide an end-to-end framework to <strong>monetize, launch, and scale</strong> USD Clearing services for financial-institution (FI) clients. It covers product design, pricing, onboarding, compliance, and performance governance—serving as a <em>“user manual”</em> for Product, Sales, Operations, and Risk teams.</p>
   </section>
 
   <section>
@@ -44,46 +43,46 @@
         <h3>2.1 Demand Drivers</h3>
         <ul>
           <li>Global trade settlement in USD (~88% of FX trades touch USD)</li>
-          <li>Correspondent banking de‑risking—regional banks outsourcing USD nostro</li>
-          <li>Need for intraday liquidity &amp; real‑time balance views (Basel III LCR)</li>
+          <li>Correspondent banking de-risking—regional banks outsourcing USD nostro</li>
+          <li>Need for intraday liquidity & real-time balance views (Basel III LCR)</li>
         </ul>
       </div>
       <div>
         <h3>2.2 Peer Benchmark (Blind Index)</h3>
         <table>
-          <tr><th>Peer</th><th>Inbound Wire (MT)</th><th>Outbound Wire (MT)</th><th>Cut‑off (EST)</th></tr>
-          <tr><td>Bank A</td><td>$6.50</td><td>$8.00</td><td>17:30</td></tr>
-          <tr><td>Bank B</td><td>$7.00</td><td>$9.50</td><td>18:00</td></tr>
+          <tr><th>Peer</th><th>Inbound Wire (MT)</th><th>Outbound Wire (MT)</th><th>Cut-off (EST)</th></tr>
+          <tr><td>Bank A</td><td>$6.50</td><td>$8.00</td><td>17:30</td></tr>
+          <tr><td>Bank B</td><td>$7.00</td><td>$9.50</td><td>18:00</td></tr>
           <tr><td><strong>Target (Us)</strong></td><td><strong>$6.00</strong></td><td><strong>$8.00</strong></td><td><strong>18:30</strong></td></tr>
         </table>
       </div>
     </div>
-    <div class="callout"><strong>Insight:</strong> Undercutting peers by 0.50–1.00 USD/txn while offering later cut‑off captures ~15% share from Tier‑2 banks in LATAM corridor.</div>
+    <div class="callout"><strong>Insight:</strong> Undercutting peers by 0.50–1.00 USD/txn while offering later cut-off captures ~15% share from Tier-2 banks in LATAM corridor.</div>
   </section>
 
   <section>
     <h2>3. Product Architecture & Pricing Design</h2>
     <h3>3.1 Core Components</h3>
     <ul>
-      <li><strong>Channels:</strong> SWIFT MT/MX, Fedwire, Book‑transfer</li>
-      <li><strong>Ancillary:</strong> FX auto‑convert, Intraday credit, MT103 copy</li>
-      <li><strong>Data Services:</strong> API for real‑time balances + webhook alerts</li>
+      <li><strong>Channels:</strong> SWIFT MT/MX, Fedwire, Book-transfer</li>
+      <li><strong>Ancillary:</strong> FX auto-convert, Intraday credit, MT103 copy</li>
+      <li><strong>Data Services:</strong> API for real-time balances + webhook alerts</li>
     </ul>
 
     <h3>3.2 Pricing Matrix</h3>
     <table>
-      <tr><th rowspan="2">Tier</th><th rowspan="2">Monthly Volume</th><th colspan="2">Wire Fee (USD)</th><th rowspan="2">FX Markup</th></tr>
+      <tr><th rowspan="2">Tier</th><th rowspan="2">Monthly Volume</th><th colspan="2">Wire Fee (USD)</th><th rowspan="2">FX Markup</th></tr>
       <tr><th>Inbound</th><th>Outbound</th></tr>
-      <tr><td>Standard</td><td>&lt;5k</td><td>$6.00</td><td>$8.00</td><td>25 bps</td></tr>
-      <tr><td>Growth</td><td>5k–20k</td><td>$5.00</td><td>$7.00</td><td>20 bps</td></tr>
-      <tr><td>Strategic</td><td>&gt;20k</td><td>$4.25</td><td>$6.00</td><td>15 bps</td></tr>
+      <tr><td>Standard</td><td>&lt;5k</td><td>$6.00</td><td>$8.00</td><td>25 bps</td></tr>
+      <tr><td>Growth</td><td>5k–20k</td><td>$5.00</td><td>$7.00</td><td>20 bps</td></tr>
+      <tr><td>Strategic</td><td>&gt;20k</td><td>$4.25</td><td>$6.00</td><td>15 bps</td></tr>
     </table>
 
     <h3>3.3 Bundled Discounts</h3>
     <ul>
-      <li><strong>Deposit Offset Program:</strong> Maintain ≥$10 MM MMDA balance → 50% wire fee rebate</li>
-      <li><strong>Liquidity Bundle:</strong> Sweep + Intraday Credit → outbound fee −$0.50</li>
-      <li><strong>Data Bundle:</strong> Subscribe to API → free MT199 repair alerts</li>
+      <li><strong>Deposit Offset Program:</strong> Maintain ≥$10 MM MMDA balance → 50% wire fee rebate</li>
+      <li><strong>Liquidity Bundle:</strong> Sweep + Intraday Credit → outbound fee −$0.50</li>
+      <li><strong>Data Bundle:</strong> Subscribe to API → free MT199 repair alerts</li>
     </ul>
 
     <h3>3.4 Margin Simulation (Tool Spec)</h3>
@@ -93,10 +92,10 @@
   <section>
     <h2>4. Client Segmentation & Personas</h2>
     <table>
-      <tr><th>Segment</th><th>Volume Range</th><th>Pain Points</th><th>Value Prop</th></tr>
-      <tr><td>Tier 1 FI</td><td>&gt;50k/mo</td><td>Cut‑off, liquidity cost</td><td>Late cut‑off, intraday credit</td></tr>
-      <tr><td>Tier 2 Bank</td><td>5k–20k/mo</td><td>FX spreads, compliance overhead</td><td>Auto‑convert FX, AML utilities</td></tr>
-      <tr><td>Broker‑Dealer</td><td>1k–5k/mo</td><td>Same‑day settlement</td><td>API access + sweep deposits</td></tr>
+      <tr><th>Segment</th><th>Volume Range</th><th>Pain Points</th><th>Value Prop</th></tr>
+      <tr><td>Tier 1 FI</td><td>&gt;50k/mo</td><td>Cut-off, liquidity cost</td><td>Late cut-off, intraday credit</td></tr>
+      <tr><td>Tier 2 Bank</td><td>5k–20k/mo</td><td>FX spreads, compliance overhead</td><td>Auto-convert FX, AML utilities</td></tr>
+      <tr><td>Broker-Dealer</td><td>1k–5k/mo</td><td>Same-day settlement</td><td>API access + sweep deposits</td></tr>
     </table>
   </section>
 
@@ -108,13 +107,13 @@
         <ul>
           <li>Pricing calculator (Excel + PowerBI)</li>
           <li>RM pitch deck (10 slides)</li>
-          <li>Objection‑handling guide (AML, cut‑off)</li>
+          <li>Objection-handling guide (AML, cut-off)</li>
         </ul>
       </div>
       <div>
-        <h3>5.2 Client‑Facing Collateral</h3>
+        <h3>5.2 Client-Facing Collateral</h3>
         <ul>
-          <li>Fee schedule &amp; SLA sheet (PDF)</li>
+          <li>Fee schedule & SLA sheet (PDF)</li>
           <li>Onboarding checklist (KYC, testing)</li>
           <li>API swagger documentation</li>
         </ul>
@@ -125,21 +124,21 @@
   <section>
     <h2>6. KPI & Governance Dashboard</h2>
     <ul>
-      <li><strong>Revenue/Client</strong> target: $50K/month median by Q4 Yr1</li>
-      <li><strong>STP Rate</strong> goal: ≥95%</li>
+      <li><strong>Revenue/Client</strong> target: $50K/month median by Q4 Yr1</li>
+      <li><strong>STP Rate</strong> goal: ≥95%</li>
       <li><strong>Return/Repair</strong> threshold: &lt;1.2%</li>
-      <li><strong>Funding Spread</strong>: ≥35 bps over SOFR</li>
+      <li><strong>Funding Spread</strong>: ≥35 bps over SOFR</li>
     </ul>
-    <div class="callout"><strong>Dashboard Spec:</strong> PowerBI pulling from ledger + SWIFT logs; refreshed hourly; red‑amber‑green thresholds.</div>
+    <div class="callout"><strong>Dashboard Spec:</strong> PowerBI pulling from ledger + SWIFT logs; refreshed hourly; red-amber-green thresholds.</div>
   </section>
 
   <section>
     <h2>7. Launch & Risk Management</h2>
     <h3>7.1 Phased Rollout</h3>
     <ul>
-      <li><strong>Pilot (0–90 days):</strong> 3 FI clients, 2 corridors; weekly steering call</li>
-      <li><strong>Phase 2 (90–180 days):</strong> Extend to 10 RMs across Americas + EMEA</li>
-      <li><strong>Full Launch (6–12 months):</strong> Self‑service onboarding, automated billing</li>
+      <li><strong>Pilot (0–90 days):</strong> 3 FI clients, 2 corridors; weekly steering call</li>
+      <li><strong>Phase 2 (90–180 days):</strong> Extend to 10 RMs across Americas + EMEA</li>
+      <li><strong>Full Launch (6–12 months):</strong> Self-service onboarding, automated billing</li>
     </ul>
     <h3>7.2 Risk & Controls</h3>
     <ul>
@@ -152,5 +151,12 @@
   <section>
     <h2>Appendix A – Glossary</h2>
     <ul>
-      <li><strong>STP</strong> – Straight‑Through Processing</li>
-      <li><strong>MM
+      <li><strong>STP</strong> – Straight-Through Processing</li>
+      <li><strong>MMDA</strong> – Money Market Deposit Account</li>
+      <li><strong>MT199</strong> – SWIFT free format message</li>
+      <li><strong>ROE</strong> – Return on Equity</li>
+      <li><strong>SOFR</strong> – Secured Overnight Financing Rate</li>
+    </ul>
+  </section>
+</body>
+</html>
